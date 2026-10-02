@@ -16,7 +16,7 @@
 | Vector store | Chroma |
 | Sparse retrieval | rank_bm25 |
 | Reranker | fastembed cross-encoder (`BAAI/bge-reranker-base` via ONNX) |
-| LLM | Anthropic Claude API |
+| LLM | Google Gemini API (`gemini-2.5-flash`) |
 | UI | Gradio |
 | Testing | pytest |
 | Linting / formatting | ruff |

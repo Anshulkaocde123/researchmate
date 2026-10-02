@@ -22,7 +22,7 @@ ResearchMate lets you ask natural-language questions about NLP research papers f
 | Vector store | Chroma |
 | Sparse retrieval | rank-bm25 |
 | Reranker | fastembed cross-encoder (`BAAI/bge-reranker-base` via ONNX) |
-| LLM | Anthropic Claude API |
+| LLM | Google Gemini API (`gemini-2.5-flash`) |
 | UI | Gradio |
 
 ## Quick start
