@@ -12,10 +12,10 @@
 |---|---|
 | Language | Python 3.11 |
 | Data validation | pydantic |
-| Embeddings | sentence-transformers (`BAAI/bge-base-en-v1.5`) |
+| Embeddings | fastembed (`BAAI/bge-base-en-v1.5` via ONNX) |
 | Vector store | Chroma |
 | Sparse retrieval | rank_bm25 |
-| Reranker | `BAAI/bge-reranker-base` |
+| Reranker | fastembed cross-encoder (`BAAI/bge-reranker-base` via ONNX) |
 | LLM | Anthropic Claude API |
 | UI | Gradio |
 | Testing | pytest |

@@ -1,0 +1,67 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# ── Build / dist ─────────────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Secrets & environment ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Data & indexes (never committed) ─────────────────────────────────────────
+data/raw/*
+data/processed/*
+data/eval/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/eval/.gitkeep
+
+indexes/*
+!indexes/.gitkeep
+
+# ── Chroma artefacts ─────────────────────────────────────────────────────────
+chroma/
+chroma.sqlite3
+
+# ── Reports / results caches ─────────────────────────────────────────────────
+reports/*
+!reports/.gitkeep
+*.json.cache
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ── Type checkers ────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+
+# ── Editors & OS ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
