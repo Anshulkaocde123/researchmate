@@ -81,7 +81,7 @@ known-first-party = ["researchmate"]
 testpaths = ["tests"]
 addopts = "--tb=short -q"
 markers = [
-    "integration: marks tests as integration tests (require ANTHROPIC_API_KEY)",
+    "integration: marks tests as integration tests (require GEMINI_API_KEY)",
 ]
 
 # ---------------------------------------------------------------------------

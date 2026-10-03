@@ -21,7 +21,7 @@ test:
 # ── Gate (lint + unit tests) — run before every commit ───────────────────────
 check: lint test
 
-# ── Integration tests (require ANTHROPIC_API_KEY) ────────────────────────────
+# ── Integration tests (require GEMINI_API_KEY) ───────────────────────────────
 test-integration:
 	pytest tests/integration/ -v -m integration
 

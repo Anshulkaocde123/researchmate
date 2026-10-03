@@ -1,0 +1,24 @@
+# Pre-commit hooks for ResearchMate
+# Install: pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+  # ── Ruff: lint (auto-fix) + format ────────────────────────────────────────
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4          # keep loosely in sync with pyproject.toml [ruff>=0.4]
+    hooks:
+      - id: ruff
+        args: [--fix]    # auto-fix safe issues before the commit lands
+      - id: ruff-format
+
+  # ── General file hygiene ──────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml          # validate YAML files (CI, pre-commit itself)
+      - id: check-toml          # validate pyproject.toml
+      - id: end-of-file-fixer   # ensure files end with a newline
+      - id: trailing-whitespace
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=500]     # block accidental data-file commits
