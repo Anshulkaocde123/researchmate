@@ -18,12 +18,18 @@ class Paragraph(BaseModel):
     paper_id: str = Field(description="arXiv ID of the parent paper.")
     section: str = Field(description="Section heading; '(no section)' when blank.")
     index: int = Field(ge=0, description="Zero-based paragraph index within the paper.")
-    text: str = Field(description="Raw paragraph text (may contain BIBREF tokens).")
+    text: str = Field(description="Paragraph text (cleaned or raw).")
+    raw_text: str = Field(
+        default="",
+        description="Original raw paragraph text before cleaning (for evidence matching).",
+    )
 
     @model_validator(mode="after")
     def text_not_empty(self) -> Paragraph:
         if not self.text.strip():
             raise ValueError(f"Paragraph {self.index} in paper {self.paper_id!r} is empty.")
+        if not self.raw_text:
+            self.raw_text = self.text
         return self
 
 
