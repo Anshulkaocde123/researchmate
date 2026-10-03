@@ -37,9 +37,13 @@ pip install -e ".[dev]"
 
 # 3. Configure secrets
 cp .env.example .env
-# Edit .env and set ANTHROPIC_API_KEY=<your-key>
+# Edit .env and set GEMINI_API_KEY=<your-key>
 
-# 4. Run checks
+# 4. Download QASPER dataset (~60 MB)
+python scripts/download_data.py          # → data/raw/{train,validation,test}.jsonl
+python scripts/inspect_schema.py        # inspect schema; output matches docs/data_schema.md
+
+# 5. Run checks
 make check
 ```
 
