@@ -69,7 +69,7 @@ researchmate/
 | Step 0 — CLAUDE.md | — | ✅ done |
 | Step 1 — repo scaffold | — | ✅ done |
 | Step 2 — data ingestion | v0.1-data | ✅ done |
-| Step 3 — retrieval pipeline | v0.2-retrieval | ⬜ |
+| Step 3 — retrieval pipeline | v0.2-retrieval | ✅ done |
 | Step 4 — RAG + Claude | v0.3-rag | ⬜ |
 | Step 5 — evaluation | v0.4-eval | ⬜ |
 | Step 6 — Gradio UI + deploy | v1.0-deployed | ⬜ |
