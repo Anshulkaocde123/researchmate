@@ -72,7 +72,7 @@ researchmate/
 | Step 3 — retrieval pipeline | v0.2-retrieval | ✅ done |
 | Step 4 — RAG + Claude | v0.3-rag | ✅ done |
 | Step 5 — evaluation | v0.4-eval | ✅ done |
-| Step 6 — Gradio UI + deploy | v1.0-deployed | ⬜ |
+| Step 6 — Gradio UI + deploy | v1.0-deployed | ✅ done |
 
 ## At the End of Each Step
 
