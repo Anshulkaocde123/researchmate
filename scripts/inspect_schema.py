@@ -100,7 +100,7 @@ def print_qa(paper: dict) -> None:
     hr("QA ENTRY — answers (all annotators, all fields)")
     for ann_idx, annotator in enumerate(qa.get("answers", [])[:3]):
         print(
-            f"\n  Annotator [{ann_idx}]  (annotation_id: {annotator.get('annotation_id','?')[:12]}…)"
+            f"\n  Annotator [{ann_idx}]  (annotation_id: {annotator.get('annotation_id', '?')[:12]}…)"
         )
         ans = annotator.get("answer", {})
         for field, val in ans.items():
@@ -109,7 +109,13 @@ def print_qa(paper: dict) -> None:
 
 def print_answer_type_counts(splits_dir: Path, splits: tuple[str, ...]) -> None:
     hr("ANSWER TYPE COUNTS (all splits, all annotators)")
-    counts: dict[str, int] = {"unanswerable": 0, "yes_no": 0, "extractive": 0, "free_form": 0, "total": 0}
+    counts: dict[str, int] = {
+        "unanswerable": 0,
+        "yes_no": 0,
+        "extractive": 0,
+        "free_form": 0,
+        "total": 0,
+    }
     for split in splits:
         path = splits_dir / f"{split}.jsonl"
         if not path.exists():

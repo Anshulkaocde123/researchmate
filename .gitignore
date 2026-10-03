@@ -42,6 +42,7 @@ chroma.sqlite3
 # ── Reports / results caches ─────────────────────────────────────────────────
 reports/*
 !reports/.gitkeep
+!reports/*.md
 *.json.cache
 
 # ── Jupyter ──────────────────────────────────────────────────────────────────
